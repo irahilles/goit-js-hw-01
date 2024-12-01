@@ -116,7 +116,7 @@ function parneChislo (num) {
     return numQuan % 2 == 0;
 }
 console.log(parneChislo(456));
-// Задача-5
+
 // Напишіть функцію, яка приймає два параметри num1 та num2. 
 // Функція повинна повернути булеве значення true, якщо num1 більше, ніж num2. 
 // В іншому випадку функція повинна повернути булеве значення false.
@@ -124,7 +124,7 @@ function checkChislo (num1, num2) {
     return num1 > num2;
 }
 console.log(checkChislo(51,50));
-// Задача-6
+
 // Напишіть функцію, яка приймає два параметри num1 та num2. 
 // Функція повинна повернути булеве значення true, якщо num1 ділиться на num2 без остачі. 
 // В іншому випадку функція повинна повернути булеве значення false.
@@ -132,7 +132,7 @@ function checkOstacha (num1, num2) {
     return num1 % num2 == 0;
 }
 console.log(checkOstacha(50,10));
-// Задача-7
+
 // Напишіть функцію, яка приймає число num.
 //  Функція повинна повернути булеве значення true, якщо num є непарним числом. 
 // В іншому випадку функція повинна повернути булеве значення false.
@@ -140,7 +140,7 @@ function chechNumber (num){
     return num % 2 !== 0;
 }
 console.log(chechNumber(9));
-// Задача-8
+
 // Напишіть функцію, яка приймає параметр str. Функція повинна повернути булеве значення true, 
 // якщо str містить принаймні одну велику літеру. В іншому випадку функція повинна повернути булеве значення false.
 // Підказка: допоможе toLowerCase();
@@ -149,9 +149,146 @@ function chechUpperCase (str) {
 }
 console.log(chechUpperCase('hello'));
 
+// Напишіть функцію, яка приймає два параметри str1 та str2. 
+// Функція повинна повернути булеве значення true, якщо довжина str1 більше, ніж довжина str2. 
+// В іншому випадку функція повинна повернути булеве значення false.
+function chechStrLength (str1, str2) {
+    return str1.length > str2.length;
+}
+console.log(chechStrLength('hello world', 'jacks'));
 
+// Напишіть функцію, яка приймає рядок str. Функція повинна повернути булеве значення true, якщо str містить хоча б один пробіл. 
+// В іншому випадку функція повинна повернути булеве значення false.
+function checkSpace (str) {
+    return str.includes(' ');
+}
+console.log(checkSpace('amazing world'));
 
+// Напишіть функцію, яка приймає рядок str. Функція повинна повернути булеве значення true, 
+// якщо str є паліндромом (однаковий у зворотному напрямку).
+//  В іншому випадку функція повинна повернути булеве значення false.
+// Підказка: тут допоможе метод масиву reverse();
+function checkReverse (str) {
+    const reversedStr = str.split('').reverse().join('');
+    return str == reversedStr;
+}
+console.log(checkReverse('hello'));
 
+// Напишіть функцію, яка приймає два параметри num1 та num2. Функція повинна повернути булеве значення true, 
+// якщо num1 менше або дорівнює num2. В іншому випадку функція повинна повернути булеве значення false.
+function chechNumLength (num1, num2) {
+    return num1 <= num2;
+}
+console.log(chechNumLength(13, 456));
 
+// Напишіть функцію, яка приймає число num. Функція повинна повернути булеве значення true,
+//  якщо num більше або дорівнює нулю. В іншому випадку функція повинна повернути булеве значення false.
+function checkN (num) {
+    return num >=0;
+}
+console.log(checkN(-456));
 
+// Напишіть функцію, яка приймає рядок str. Функція повинна повернути булеве значення true, 
+// якщо довжина str є парною. В іншому випадку функція повинна повернути булеве значення false.
+function checkLengthof (str) {
+    return str.length % 2 === 0;
+}
+console.log(checkLengthof('I love Baker'));
+
+// Напишіть функцію, яка приймає два параметри num1 та num2. Функція повинна повернути булеве значення true, 
+// якщо num1 ділиться на 2,а num2 не ділиться на 2. В іншому випадку функція повинна повернути булеве значення false.
+function chechDivision (num1, num2) {
+    return num1 % 2 == 0 && num2 % 2 !== 0;
+}
+console.log(chechDivision(10, 13));
+
+// Напишіть функцію, яка приймає число num. Функція повинна повернути булеве значення true, 
+// якщо num більше 100, але менше 200. В іншому випадку функція повинна повернути булеве значення false.
+function checkN (num) {
+    return num > 100 && num < 200;
+}
+console.log(checkN(212));
+
+// Напишіть функцію, яка приймає рядок str. Функція повинна повернути булеве значення true, 
+// якщо str містить лише маленькі літери. В іншому випадку функція повинна повернути булеве значення false.
+// Підказка: допоможе toLowerCase();
+function checkLengthof (str) {
+    return str === str.toLowerCase();
+}
+console.log(checkLengthof('b love baker'));
+
+// Напишіть функцію, яка приймає два параметри str1 та str2. Функція повинна повернути булеве значення true, 
+// якщо str1 є частиною str2. В іншому випадку функція повинна повернути булеве значення false.
+function chechStrLength (str1, str2) {
+    return str2.includes(str1);
+}
+console.log(chechStrLength('my love', 'hello world'));
+
+// Напишіть функцію, яка приймає число num. Функція повинна повернути булеве значення true, 
+// якщо num є негативним числом. В іншому випадку функція повинна повернути булеве значення false.
+function checkN (num) {
+    return num < 0;
+}
+console.log(checkN(-212));
+
+// Напишіть функцію, яка приймає два параметри num1 та num2. Функція повинна повернути булеве значення true, 
+// якщо різниця між num1 та num2 більше 50. В іншому випадку функція повинна повернути булеве значення false.
+function chechDivision (num1, num2) {
+    return num1 - num2 > 50;
+}
+console.log(chechDivision(10, 13));
+
+// Напишіть функцію, яка приймає число num. Функція повинна повернути булеве значення true, 
+// якщо num є кратним 10. В іншому випадку функція повинна повернути булеве значення false.
+function checkN (num) {
+    return num % 10 == 0;
+}
+console.log(checkN(210));
+// Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. значення змінної value. Використовуй методи Math.floor(), 
+// Math.ceil() та Math.round(). Перевір що буде в консолі при значеннях 27.3 та 27.9.
+const value = 27.3;
+const rounddown = Math.floor(value);
+const roundup = Math.ceil(value);
+const round = Math.round(value);
+console.log(round);
+console.log(roundup);
+console.log(rounddown);
+// analize the values of the following:
+console.log('4' == 4); 
+console.log('6' === 6); 
+console.log('false' === false);
+console.log(1 == true);
+console.log(1 === true);
+console.log('0' == false);
+console.log('0' === false);
+console.log('Papaya' < 'papaya');
+console.log('Papaya' === 'papaya');
+console.log(undefined == null);
+console.log(undefined === null);
+
+// Напиши скрипт який переведе значення totalMinutes (кількість хвилин) рядок у форматі годин та хвилин HH:MM.
+
+// 70 покаже 01:10
+// 450 покаже 07:30
+// 1441 покаже 24:01
+
+const totalMinutes = 70;
+
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
+console.log(hours);
+console.log(minutes);
+
+const doubleDigitHours = String(hours).padStart(2, 0);
+const doubleDigitMinutes = String(minutes).padStart(2, 0);
+console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// Отрефактори код так, щоб у змінну value присвоювалося значення змінної incomingValue, 
+// якщо воно не дорівнює undefined або null. У в іншому випадку має надаватися значення defaultValue. 
+// Перевір роботу скрипта для сліпучих значень змінної incomingValue: null, undefined, 0, false. 
+// Використовуй оператор "?" (nullish coalescing operator).
+const incomingValue = null; // Спробуй також null, undefined, 0, false
+const defaultValue = 10;
+// Використовуємо ?? для перевірки лише null або undefined
+const value2 = incomingValue ?? defaultValue;
+console.log(value2);
 
